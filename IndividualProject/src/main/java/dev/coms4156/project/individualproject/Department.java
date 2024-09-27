@@ -28,6 +28,26 @@ public class Department implements Serializable {
   }
 
   /**
+   * Sets the number of majors in the department.
+   * 
+   *
+   * @param numberOfMajors an {@code int} representing the number of majors 
+   *                       to set for the department. The value must be 
+   *                       greater than or equal to 0.
+   * 
+   * @return {@code true} if the number of majors was successfully updated, 
+   *         {@code false} if the provided number was negative and the 
+   *         update was not performed.
+   */
+  public boolean setNumberOfMajors(int numberOfMajors) {
+    if (numberOfMajors >= 0) {
+      this.numberOfMajors = numberOfMajors;
+      return true;
+    }
+    return false;
+  }
+
+  /**
    * Gets the number of majors in the department.
    *
    * @return The number of majors.
@@ -64,10 +84,12 @@ public class Department implements Serializable {
   /**
    * Decreases the number of majors in the department by one if it's greater than zero.
    */
-  public void dropPersonFromMajor() {
+  public boolean dropPersonFromMajor() {
     if (numberOfMajors > 0) {
       numberOfMajors--;
+      return true;
     }
+    return false;
   }
 
   /**
