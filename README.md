@@ -29,7 +29,7 @@ entrypoint: java -jar target/IndividualProject-0.0.1-SNAPSHOT.jar
 runtime: java17
 instance_class: F1
 ```
-5. Make sure that you have set up the project as described in step 5 of [this section](https://github.com/elifia-muthia/4156-Miniproject-2024-Students-Java/edit/docs-and-maintenance/README.md#building-and-running-a-local-instance).
+5. Make sure that you have set up the project as described in step 5 of [this section](https://github.com/elifia-muthia/4156-Miniproject-2024-Students-Java?tab=readme-ov-file#building-and-running-a-local-instance).
 6. Run the following command, replacing `PROJECT_ID` with your GCP Project ID:
 ```
 gcloud config set project PROJECT_ID
